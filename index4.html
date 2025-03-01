@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect - Team Explorers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+    <div class="navbar">AgriConnect - Developed by Team Explorers</div>
+
+    <div class="hero">
+        <h1>Empowering Farmers, Connecting Communities</h1>
+        <p>Sell fresh produce, maximize profits & stay ahead in the market!</p>
+    </div>
+
+    <div class="login-box">
+        <h2>Login</h2>
+        <input type="text" placeholder="Email Address">
+        <input type="password" placeholder="Password">
+        <button class="signup-btn">Sign Up</button>
+        <button>Login</button>
+    </div>
+
+    <div class="market-trends">
+        <h2>Market Demand Trends</h2>
+        <div class="trend-item">
+            <img src="tomato.jpg" alt="Tomato">
+            <p>Tomatoes: ₹50/kg | App Price: ₹45/kg</p>
+        </div>
+        <div class="trend-item">
+            <img src="milk.jpg" alt="Milk">
+            <p>Milk: ₹60/ltr | App Price: ₹55/ltr</p>
+        </div>
+        <div class="trend-item">
+            <img src="wheat.jpg" alt="Wheat">
+            <p>Wheat: ₹40/kg | App Price: ₹35/kg</p>
+        </div>
+    </div>
+
+    <table class="price-table">
+        <tr>
+            <th>Product</th>
+            <th>Market Price</th>
+            <th>App Price</th>
+        </tr>
+        <tr>
+            <td>Tomato</td>
+            <td>₹50/kg</td>
+            <td>₹45/kg</td>
+        </tr>
+        <tr>
+            <td>Milk</td>
+            <td>₹60/ltr</td>
+            <td>₹55/ltr</td>
+        </tr>
+        <tr>
+            <td>Wheat</td>
+            <td>₹40/kg</td>
+            <td>₹35/kg</td>
+        </tr>
+    </table>
+
+    <div class="carousel">
+        <img src="carrot.jpg" alt="Carrot">
+        <img src="apple.jpg" alt="Apple">
+        <img src="grapes.jpg" alt="Grapes">
+        <img src="potato.jpg" alt="Potato">
+    </div>
+
+    <div class="profit-calculator">
+        <h2>Profit Calculator</h2>
+        <input type="number" id="sellingPrice" placeholder="Selling Price per kg">
+        <input type="number" id="costPrice" placeholder="Cost per kg">
+        <button onclick="calculateProfit()">Calculate</button>
+        <p id="profitMessage"></p>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 - Developed by Team Explorers | <i>"Transforming Agriculture with Technology"</i>
+    </div>
+
+</body>
+</html>

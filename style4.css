@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4fff0;
+    color: #333;
+    text-align: center;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #38b000, #2a8000);
+    padding: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hero {
+    padding: 3rem;
+    background: url('farm-background.jpg') no-repeat center center/cover;
+    color: black;
+    text-shadow: 0px 3px 2px rgba(155, 153, 153, 0.5);
+}
+
+.login-box {
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 3px 6px 10px rgba(52, 50, 50, 0.2);
+}
+.login-box:hover {
+color: rgb(60, 128, 46);
+background-color: rgb(224, 224, 224);
+}
+
+.login-box input, .login-box button {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #5b5858;
+    border-radius: 30px;
+    transition: 0.3s;
+    color: black;
+
+}
+
+.login-box button {
+    background: #38b000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.login-box button:hover {
+    background: #2a8000;
+    box-shadow: 2px 3px 4px gray;
+    background-color: rgb(127, 223, 127);
+    color: rgb(31, 21, 226);
+    font-weight: bold;
+}
+
+.market-trends {
+    padding: 2rem;
+    background: white;
+    margin: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trend-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    background: #e8f5e9;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.trend-item img {
+    width: auto;
+    height: 90px;
+    border-radius: 15px;
+    margin-right: 90px;
+    margin-left: 60px;
+}
+
+.profit-calculator {
+    padding: 2rem;
+    background: white;
+    margin: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profit-calculator input, .profit-calculator button {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.profit-calculator button {
+    background: #38b000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.profit-calculator button:hover {
+    background: #2a8000;
+}
+
+#profitMessage {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #38b000;
+}
+
+.price-table {
+    width: 80%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+}
+
+.price-table th, .price-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.price-table th {
+    background: #38b000;
+    color: white;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.carousel img {
+    width: 200px;
+    height: 150px;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+.footer {
+    background: #1b4332;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}

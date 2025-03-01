@@ -1,0 +1,65 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4fff0;
+    color: #111111;
+    text-align: center;
+}
+
+.navbar {
+    background: #38b000;
+    padding: 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.hero {
+    padding: 3rem;
+    background: #1b4332;
+    color: white;
+}
+
+.login-box {
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.login-box input, .login-box button {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-box button {
+    background: #38b000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.market-trends {
+    padding: 2rem;
+    background: white;
+}
+
+.profit-calculator {
+    padding: 2rem;
+    background: #f0fff1;
+}
+
+.footer {
+    background: #1b4332;
+    color: white;
+    padding: 1rem;
+}

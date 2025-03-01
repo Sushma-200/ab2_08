@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect - Team Explorers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f4fff0;
+            color: #333;
+            text-align: center;
+        }
+
+        .navbar {
+            background: #38b000;
+            padding: 1rem;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .hero {
+            padding: 3rem;
+            background: url('farm-background.jpg') no-repeat center center/cover;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .login-box {
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            width: 300px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-box input, .login-box button {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 1px solid #2b0e0e;
+            border-radius: 5px;
+        }
+
+        .login-box button {
+            background: #38b000;
+            color: rgb(238, 226, 226)smoke;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+           
+        }
+
+        .login-box button:hover {
+            background: #2a8000;
+            box-shadow: 3px 4px 5px gray;
+        }
+
+        .market-trends, .profit-calculator {
+            padding: 2rem;
+            background: white;
+            margin: 2rem;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .market-trends img {
+            width: 50px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .profit-calculator input, .profit-calculator button {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .profit-calculator button {
+            background: #38b000;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .profit-calculator button:hover {
+            background: #2a8000;
+        }
+
+        .video-section {
+            padding: 2rem;
+            background: #f0fff1;
+        }
+
+        .footer {
+            background: #1b4332;
+            color: white;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">AgriConnect 
+        <ul>
+<li>Home</li>
+<li>About Us </li>
+<li>Contact </li>
+
+        </ul>
+    </div>
+
+    <div class="hero">
+        <h1>Empowering Farmers, Connecting Communities</h1>
+        <p>Sell fresh produce, maximize profits & stay ahead in the market!</p>
+    </div>
+
+    <div class="login-box">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username / Email Address">
+        <input type="password" placeholder="Password">
+        <button class="signup-btn">Sign Up</button>
+        <button>Login</button>
+      
+    </div>
+
+    <div class="market-trends">
+        <h2>Market Demand Trends</h2>
+        <p><img src="tomato.jpg" alt="Tomato"> Tomatoes: High Demand | ₹50/kg</p>
+        <p><img src="milk.jpg" alt="Milk"> Milk: Moderate Demand | ₹60/ltr</p>
+        <p><img src="wheat.jpg" alt="Wheat"> Wheat: Low Demand | ₹40/kg</p>
+    </div>
+
+    <div class="profit-calculator">
+        <h2>Profit Calculator</h2>
+        <p>Enter details to estimate profit</p>
+        <input type="number" placeholder="Selling Price per kg">
+        <input type="number" placeholder="Cost per kg">
+        <button>Calculate</button>
+    </div>
+
+    <div class="video-section">
+        <h2>Watch How AgriConnect Helps Farmers</h2>
+        <video width="80%" controls>
+            <source src="farm-video.mp4" type="video/mp3">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 - Developed by Team Explorers | <i>"Transforming Agriculture with Technology"</i>
+    </div>
+
+    <script>
+        let isLogin = true;
+        function toggleForm() {
+            isLogin = !isLogin;
+            document.getElementById("formTitle").innerText = isLogin ? "Login" : "Signup";
+            document.getElementById("name").style.display = isLogin ? "none" : "block";
+        }
+        function submitForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const url = isLogin ? "/login" : "/register";
+            const data = isLogin ? { email, password } : { name, email, password };
+
+            fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            })
+            .then(res => res.json())
+            .then(response => document.getElementById("message").innerText = response.message || response.error)
+            .catch(error => console.error("Error:", error));
+        }
+        function calculateProfit() {
+            const sellingPrice = parseFloat(document.getElementById("sellingPrice").value);
+            const costPrice = parseFloat(document.getElementById("costPrice").value);
+            document.getElementById("profitMessage").innerText = isNaN(sellingPrice) || isNaN(costPrice) 
+                ? "Enter valid numbers!" : Profit: RS{(sellingPrice - costPrice).toFixed(2)};
+        }
+    </script>
+
+</body>
+</html>
